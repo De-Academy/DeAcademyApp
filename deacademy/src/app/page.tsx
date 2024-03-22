@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import logo from "./assets/logo.png"
+import logo from "./assets/logo_bola.png"
 import discord_logo from "./assets/discord-logo.png"
+import twitter_logo from "./assets/twitter-logo.png"
+import github_logo from "./assets/github-logo.png"
 
 
 const page = () => {
@@ -11,16 +13,16 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 mt-4">
-              <a href="/" className="text-white font-bold text-xl flex items-center">
+              <a href="/" className="text-white font-bold text-xl flex items-center font">
                 <Image
                   src={logo}
                   alt="Logo"
                   id="logo"
+                  height={45}
+                  width={45}
                   className="mr-2"
-                  width={50}
-                  height={50}
                 />
-                DeAcademy
+                <p id='nome-logo' >DeAcademy</p>
               </a>
             </div>
             <div className="hidden md:flex items-center mt-6">
@@ -28,7 +30,6 @@ const page = () => {
                 <a href="#" className="text-gray-100 hover:bg-purple-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">What We Are</a>
                 <a href="#" className="text-gray-100 hover:bg-purple-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">RoadMap</a>
               </div>
-
               <a href="https://discord.gg/EFJB3s3U" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
                 <Image
                   src={discord_logo}
@@ -36,6 +37,24 @@ const page = () => {
                   className=""
                   width={30}
                   height={15}
+                />
+              </a>
+              <a href="https://twitter.com/de_academy_" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
+                <Image
+                  src={twitter_logo}
+                  alt="Logo"
+                  className=""
+                  width={20}
+                  height={25}
+                />
+              </a>
+              <a href="https://twitter.com/de_academy_" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
+                <Image
+                  src={github_logo}
+                  alt="Logo"
+                  className=""
+                  width={28}
+                  height={25}
                 />
               </a>
             </div>
