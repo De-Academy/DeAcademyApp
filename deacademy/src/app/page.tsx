@@ -66,10 +66,10 @@ const page = () => {
      {/* Buttons */}
       <div className="flex items-center justify-center align-center my-20 text-3xl font-bold">
 
-        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 border-2 rounded-full shadow-2xl"> 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 rounded-full shadow-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-violet-700 hover:-translate-y-1"> 
         <p className="text-white">Start Learning</p> </button>
 
-        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white border-2 rounded-full shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)]">
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white rounded-full shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-gray-100 hover:-translate-y-1">
           <p className="text-deacademy-purple">Start Teaching</p>
         </button>
 
