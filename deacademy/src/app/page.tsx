@@ -11,6 +11,7 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 mt-4">
+              {/* Logo and Name */}
               <a href="/" className="text-white font-bold text-xl flex items-center">
                 <Image
                   src={logo}
@@ -50,6 +51,7 @@ const page = () => {
         </div>
       </nav> 
 
+      {/* Main and Sub Text */}
       <div className="hidden md:flex items-center justify-center mt-44">
         <div className="flex flex-col items-center">
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100" >Learn and Earn</h1>
