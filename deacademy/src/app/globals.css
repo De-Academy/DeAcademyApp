@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#main-text-home-page {
+  font-size: 80px;
+}
+
+#sub-text-home-page {
+  font-size: 30px;
+}
+
+#logo {
+  border-radius: 25px;
+}
