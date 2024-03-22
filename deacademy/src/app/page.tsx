@@ -55,7 +55,7 @@ const page = () => {
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100">Teach and Reach</h1>
           <div className="flex flex-col items-center mt-8">
             <p id="sub-text-home-page" className="text-6x1 font-bold text-gray-100">Bringing a new form of promoting education.</p>
-            <p id="sub-text-home-page" text-32 className="text-6x1 font-bold text-gray-100">Descentralized, Easy and Fun.</p>
+            <p id="sub-text-home-page" className="text-6x1 font-bold text-gray-100">Descentralized, Easy and Fun.</p>
           </div>
         </div>
       </div>
