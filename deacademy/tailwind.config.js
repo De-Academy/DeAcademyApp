@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'deacademy-purple': '#6906BA'
+      }
+    },
   },
   plugins: [],
 }

@@ -48,7 +48,8 @@ const page = () => {
             </div>
           </div>
         </div>
-      </nav>  
+      </nav> 
+
       <div className="hidden md:flex items-center justify-center mt-44">
         <div className="flex flex-col items-center">
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100" >Learn and Earn</h1>
@@ -59,12 +60,20 @@ const page = () => {
           </div>
         </div>
       </div>
-      
 
+     {/* Buttons */}
+      <div className="flex items-center justify-center align-center my-20 text-3xl font-bold">
 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 border-2 rounded-full shadow-2xl"> 
+        <p className="text-white">Start Learning</p> </button>
 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white border-2 rounded-full shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)]">
+          <p className="text-deacademy-purple">Start Teaching</p>
+        </button>
 
+      </div>
 
+    
     </div>
   )
 }
