@@ -13,7 +13,8 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 mt-4">
-              <a href="/" className="text-white font-bold text-xl flex items-center font">
+              {/* Logo and Name */}
+              <a href="/" className="text-white font-bold text-xl flex items-center">
                 <Image
                   src={logo}
                   alt="Logo"
@@ -67,7 +68,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </nav>  
+      </nav> 
+
+      {/* Main and Sub Text */}
       <div className="hidden md:flex items-center justify-center mt-44">
         <div className="flex flex-col items-center">
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100" >Learn and Earn</h1>
@@ -78,12 +81,20 @@ const page = () => {
           </div>
         </div>
       </div>
-      
 
+     {/* Buttons */}
+      <div className="flex items-center justify-center align-center my-20 text-3xl font-bold">
 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 rounded-full shadow-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-violet-700 hover:-translate-y-1"> 
+        <p className="text-white">Start Learning</p> </button>
 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white rounded-full shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-gray-100 hover:-translate-y-1">
+          <p className="text-deacademy-purple">Start Teaching</p>
+        </button>
 
+      </div>
 
+    
     </div>
   )
 }
