@@ -8,7 +8,7 @@ import github_logo from "./assets/github-logo.png"
 
 const page = () => {
   return (
-    <div className="h-dvh bg-gradient-to-b from-purple-900 from-37% to-purple-100 to-80%">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-purple-900 from-37% to-purple-100 to-95%">
       <nav>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -71,7 +71,7 @@ const page = () => {
       </nav> 
 
       {/* Main and Sub Text */}
-      <div className="hidden md:flex items-center justify-center mt-44">
+      <div className="md:flex items-center justify-center mt-44">
         <div className="flex flex-col items-center">
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100" >Learn and Earn</h1>
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100">Teach and Reach</h1>
