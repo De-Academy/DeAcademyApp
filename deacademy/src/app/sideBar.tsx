@@ -10,14 +10,17 @@ export default function sideBar() {
     return (
         <aside className="h-screen w-52 fixed top-0 left-0 justify-center">
             <div className="bg-gradient-to-b from-violet-700 to-cyan-400 h-full flex flex-col items-center">
-                <a href="/StudentCourses"  className="rounded-full h-24 w-24  mt-5">
-                            <Image src={logo} alt="DeAcademyIcon" className="rounded-full h-24 w-24"/>
+
+                {/*logo e nome*/}
+                <a href="/StudentCourses"  className="rounded-full h-20 w-20  mt-5">
+                            <Image src={logo} alt="DeAcademyIcon" className="rounded-full h-20 w-20"/>
                 </a>
 
-                <a href="/" className=" mb-20 h-0 p-0">
-                    <h3 className=" mb-10 font-bold text-white text-2xl">DeAcademy</h3>
+                <a href="/StudentCourses" className="mb-16 h-0 p-0">
+                    <h3 className="font-bold text-white text-2xl">DeAcademy</h3>
                 </a>
 
+                {/*icones*/}
                 <ul>
                     <li>
                         <div className="flex flex-row items-center my-4">
@@ -60,6 +63,11 @@ export default function sideBar() {
                         </div>
                     </li>
                 </ul>
+
+                {/*Student/teacher bottom button*/}
+                <button className="mt-48 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-7 py-2">
+                    <p className="font-bold text-white">Student</p>
+                </button>
             </div>
 
         </aside>
