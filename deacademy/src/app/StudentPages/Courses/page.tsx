@@ -1,7 +1,11 @@
-import sideBar from "../../sideBar";
+import SideBar from "../../sideBar";
+import WalletConnectButton from "../Components/WalletConnectButton";
 
 export default function Page() {
     return (
-        sideBar()
+        <main> 
+        <SideBar/>
+        <WalletConnectButton/>
+        </main>
     );
 }
