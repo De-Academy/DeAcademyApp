@@ -6,7 +6,7 @@ import marketplace from "./assets/marketplace.png"
 import overview from "./assets/painel.png"
 import Image from "next/image";
 
-export default function sideBar() {
+const SideBar = () => {
     return (
         <aside className="h-screen w-52 fixed top-0 left-0 justify-center">
             <div className="bg-gradient-to-b from-violet-700 to-cyan-400 h-full flex flex-col items-center">
@@ -73,3 +73,5 @@ export default function sideBar() {
         </aside>
     );
   }
+
+export default SideBar;
