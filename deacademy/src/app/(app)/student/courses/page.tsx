@@ -1,4 +1,5 @@
-import SideBar from "../../sideBar";
+import SideBar from "../../components/sideBar";
+import TextArea from "../Components/TextArea";
 import WalletConnectButton from "../Components/WalletConnectButton";
 
 export default function Page() {
@@ -6,6 +7,7 @@ export default function Page() {
         <main> 
         <SideBar/>
         <WalletConnectButton/>
+        <TextArea/>
         </main>
     );
 }
