@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import logo from "./assets/logo_bola.png"
-import discord_logo from "./assets/discord-logo.png"
-import twitter_logo from "./assets/twitter-logo.png"
-import github_logo from "./assets/github-logo.png"
+import logo from "../../assets/logo_bola.png"
+import discord_logo from "../../assets/discord-logo.png"
+import twitter_logo from "../../assets/twitter-logo.png"
+import github_logo from "../../assets/github-logo.png"
 
 
 const page = () => {
@@ -76,7 +76,7 @@ const page = () => {
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100" >Learn and Earn</h1>
           <h1 id="main-text-home-page" className="text-6xl font-bold text-gray-100">Teach and Reach</h1>
           <div className="flex flex-col items-center mt-8">
-            <p id="sub-text-home-page" className="text-6x1 font-bold text-gray-100">Bringing a new form of promoting education.</p>
+            <p className="text-app font-bold text-gray-100">Bringing a new form of promoting education.</p>
             <p id="sub-text-home-page" className="text-6x1 font-bold text-gray-100">Descentralized, Easy and Fun.</p>
           </div>
         </div>
@@ -84,11 +84,10 @@ const page = () => {
 
      {/* Buttons */}
       <div className="flex items-center justify-center align-center my-20 text-3xl font-bold">
-
-        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 rounded-full shadow-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-violet-700 hover:-translate-y-1"> 
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-violet-600 rounded-full shadow-2xl  hover:bg-violet-700 hover:-translate-y-1"> 
         <p className="text-white">Start Learning</p> </button>
 
-        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white rounded-full shadow-[0_4px_4px_0px_rgba(0,0,0,0.3)] hover:bg-gray-100 hover:-translate-y-1">
+        <button className="flex flex-col mx-24 bg-clip-padding p-6 bg-white rounded-full shadow-2xl hover:bg-gray-100 hover:-translate-y-1">
           <p className="text-deacademy-purple">Start Teaching</p>
         </button>
 
