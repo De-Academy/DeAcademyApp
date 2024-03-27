@@ -12,6 +12,10 @@ module.exports = {
     extend: {
       colors: {
         'deacademy-purple': '#6906BA'
+      },
+      fontSize: {
+        app:'30px'
+
       }
     },
   },
