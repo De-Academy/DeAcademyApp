@@ -23,9 +23,11 @@ export default function Page() {
             {active === 'informations' && (
                 <div className="flex justify-center items-center h-full">
                     <div className="ml-10 w-1/2">
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-4 m-2">
+                            <div className="border-black border-2 rounded-lg">
                             <TextInput placeholder={"Title"} label={"label"} />
-                            <div className="flex flex-col">
+                            </div>
+                            <div className="flex flex-col border-black border-2 rounded-lg">
                                 <TextInput placeholder={"Value"} label={"Value"} />
                                 <TextInput placeholder={"Supply"} label={"Supply"} />
                             </div>

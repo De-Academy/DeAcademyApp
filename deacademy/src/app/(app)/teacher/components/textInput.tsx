@@ -1,7 +1,7 @@
 const textInput = ({label, placeholder}) => {
     return (
         <main>
-            <div className="p-2 border-2 border-black rounded-lg m-2">
+            <div className="border-black rounded-lg m-2">
                 <label className="block mb-2 text-sm font-medium text-purple-800 dark:text-white">{ label }</label>
                     <input 
                     type="text" 
