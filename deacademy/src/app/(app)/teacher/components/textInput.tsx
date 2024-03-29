@@ -1,4 +1,10 @@
-const textInput = ({label, placeholder}) => {
+export type TextInputProps = {
+    label : string
+    placeholder : string
+}
+
+
+export const TextInput = ({label, placeholder} : TextInputProps) => {
     return (
         <main>
             <div className="border-black rounded-lg m-2">
@@ -13,4 +19,3 @@ const textInput = ({label, placeholder}) => {
     )
 };
 
-export default textInput;

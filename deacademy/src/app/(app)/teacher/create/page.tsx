@@ -4,7 +4,8 @@ import { useState } from "react";
 import Button from "../../components/Button";
 import SideBar from "../../components/sideBar";
 import TextArea from "../components/TextArea";
-import TextInput from "../components/textInput";
+import { TextInput } from "../components/textInput";
+
 
 export default function Page() {
     const [active, setActive] = useState<'informations' | 'upload'>('informations')
