@@ -5,6 +5,7 @@ import Button from "../../components/Button";
 import SideBar from "../../components/sideBar";
 import TextArea from "../components/TextArea";
 import { TextInput } from "../components/textInput";
+import Lecture from "../components/Lecture";
 
 
 export default function Page() {
@@ -41,7 +42,10 @@ export default function Page() {
                 </div>
             )}
             {active === 'upload' && (
-                    <h1 className="m-96"> UPLOAD </h1>
+                 <div className="flex justify-center items-center h-full ml-36">
+                <Lecture></Lecture>
+                </div>  
+                
             )}
             </main>
         </div>
