@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, HtmlHTMLAttributes, ReactNode } from "reac
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children: ReactNode
+    children: ReactNode;
 }
 
 
