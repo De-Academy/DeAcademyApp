@@ -21,7 +21,7 @@ const Lecture = () => {
                     </div>
             </div>
             {active === 'content' &&(
-            <div className="flex justify-center mt-10">   
+            <div className="flex justify-center m-16">   
                 <UploadButton onVideoSelect={(file: File): void => {
                     throw new Error("Function not implemented.");
                 }}></UploadButton>

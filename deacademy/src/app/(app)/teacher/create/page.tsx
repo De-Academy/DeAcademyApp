@@ -41,7 +41,9 @@ export default function Page() {
             )}
             {active === 'upload' && (
                  <div className="flex justify-center items-center h-full ml-36">
-                <Lecture></Lecture>
+                    <div className="border-black border-2 rounded-lg p-4">
+                        <Lecture></Lecture>
+                    </div>
                 </div>  
                 
             )}
