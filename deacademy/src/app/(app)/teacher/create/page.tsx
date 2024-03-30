@@ -12,14 +12,12 @@ export default function Page() {
     const [active, setActive] = useState<'informations' | 'upload'>('informations')
 
 
-
-
     return (
         <div className="flex flex-col h-screen">
             <SideBar/>
             <div className="flex gap-24 justify-start ml-80 p-4">
-                <Button onClick={() => setActive('informations')} className="bg-blue-800">Informations</Button>
-                <Button onClick={() => setActive('upload')}>Upload</Button>
+            <Button color={active === 'informations' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('informations')} className="hover:bg-blue-500">Informations</Button>
+            <Button color={active === 'upload' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('upload')} className="hover:bg-blue-500"> Upload</Button>
             </div>
             <main className="flex-1">
             {active === 'informations' && (
