@@ -5,12 +5,17 @@ import Button from "../../components/Button";
 import SideBar from "../../components/sideBar";
 import TextArea from "../components/TextArea";
 import { TextInput } from "../components/textInput";
-import Lecture from "../components/Lecture";
+import Section from "../components/Section";
 
 
 export default function Page() {
     const [active, setActive] = useState<'informations' | 'upload'>('informations')
 
+    const [SectionCount, setSectionCount] = useState(1);
+
+    const handleAddSection = () => {
+        setSectionCount(prevCount => prevCount + 1);
+    };
 
     return (
         <div className="flex flex-col h-screen">
@@ -40,13 +45,26 @@ export default function Page() {
                 </div>
             )}
             {active === 'upload' && (
+                <main >
                  <div className="flex justify-center items-center h-full ml-36">
-                    <div className="border-black border-2 rounded-lg p-4">
-                        <Lecture></Lecture>
-                    </div>
-                </div>  
-                
+                        <div>
+                            {[...Array(SectionCount)].map((_, index) => (
+                                <Section key={index} number={index + 1} />
+                            ))}
+                        </div>
+                </div >
+                <div className="flex justify-center">
+                    <button
+                        className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4 mt-5 mb-3 h-6"
+                        onClick={handleAddSection}>
+                        + Section
+                    </button>
+                </div>
+                </main>
+             
             )}
+
+
             </main>
         </div>
     );
