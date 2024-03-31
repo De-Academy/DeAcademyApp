@@ -46,20 +46,20 @@ export default function Page() {
             )}
             {active === 'upload' && (
                 <main >
-                 <div className="flex justify-center items-center h-full ml-36">
-                        <div>
-                            {[...Array(SectionCount)].map((_, index) => (
-                                <Section key={index} number={index + 1} />
-                            ))}
-                        </div>
-                </div >
-                <div className="flex justify-center">
-                    <button
-                        className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4 mt-5 mb-3 h-6"
-                        onClick={handleAddSection}>
-                        + Section
-                    </button>
-                </div>
+                    <div className="flex justify-center items-center h-full ml-36">
+                            <div className="">
+                                {[...Array(SectionCount)].map((_, index) => (
+                                    <Section key={index} number={index + 1} />
+                                ))}
+                            </div>
+                    </div >
+                    <div className="">
+                        <button
+                            className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4  mb-3 h-6"
+                            onClick={handleAddSection}>
+                            + Section
+                        </button>
+                    </div>
                 </main>
              
             )}
