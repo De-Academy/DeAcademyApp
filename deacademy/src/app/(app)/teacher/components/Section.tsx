@@ -16,7 +16,7 @@ const Section = ({number} : SectionProps) => {
 
 
     return (
-        <main className="border-black border-2 rounded-lg pr-10 pl-10">
+        <main className="border-black border-2 mb-4 rounded-lg pr-10 pl-10">
             <div className="flex justify-start items-center mb-4 mt-4">
                         <p>Section {number}</p>
                         <TextInput label="" placeholder=""></TextInput>
