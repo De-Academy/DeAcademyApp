@@ -24,7 +24,8 @@ const Lecture = () => {
             <div className="flex justify-center m-16">   
                 <UploadButton onVideoSelect={(file: File): void => {
                     throw new Error("Function not implemented.");
-                }}></UploadButton>
+                }}></UploadButton> 
+            <p className="flex items-center">Add Media</p>
             </div>)} 
             {active == 'description' && (
                 <TextArea ></TextArea>
