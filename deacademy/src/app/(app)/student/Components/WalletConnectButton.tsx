@@ -7,6 +7,7 @@ import * as walletAdapterWallets from '@solana/wallet-adapter-wallets'
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 require('@solana/wallet-adapter-react-ui/styles.css')
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import WalletContext from '../../contexts/WalletContext';
 
 const WalletConnectButton = () => {
     const endpoint = web3.clusterApiUrl('devnet')
@@ -42,15 +43,12 @@ const WalletConnectButton = () => {
                                 <h2> Account Info </h2>
                                 
                                 <WalletMultiButton className='!bg-red-500'/>
-
                             </div>
                         </div>
                     </main>
-
                 </WalletModalProvider>
             </walletAdapterReact.WalletProvider>
-        </walletAdapterReact.ConnectionProvider>
-    
+        </walletAdapterReact.ConnectionProvider>    
     </>
     
     );
