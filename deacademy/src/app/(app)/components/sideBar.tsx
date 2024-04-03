@@ -1,3 +1,4 @@
+"use client";
 
 import logo from "../../../assets/logo e nome 3.png"
 import courses from "../../../assets/courses-black.png"
@@ -6,8 +7,15 @@ import marketplace from "../../../assets/marketplace-black.png"
 import overview from "../../../assets/painel-black.png"
 import Image from "next/image";
 import SideBarElement from "./SideBarElement"
+import { useState } from "react"
 
 const SideBar = () => {
+
+    const [active, setActive] = useState<'teacher' | 'student'>('student');
+
+
+
+
     return (
         <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
@@ -22,6 +30,8 @@ const SideBar = () => {
                 
 
                 {/*Elementos*/}
+
+                {active === 'student' && (
                 <ul>
                     <SideBarElement 
                      elementIcon={
@@ -51,11 +61,12 @@ const SideBar = () => {
                      elementTitle="Overview" 
                      redirectionLink="/student/overview"/>
                 </ul>
-                {/*Student/teacher bottom button*/}
+                )}
+                                {/*Student/teacher bottom button*/}
                 <button className="mt-80 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
                     <p className="font-bold text-white">Student</p>
                 </button>
-            </div>
+                            </div>
 
         </aside>
         </main>
