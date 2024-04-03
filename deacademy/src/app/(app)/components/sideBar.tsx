@@ -8,12 +8,18 @@ import Image from "next/image";
 import SideBarElement from "./SideBarElement"
 
 const SideBar = () => {
+
+    
+
+
+
     return (
         <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
             <div className="bg-white h-full flex flex-col items-center">
 
                 {/*logo e nome*/}
+                
                 <div className="flex flex-row justify-center items-center m-4 mb-14">
                     <a href="/"  className="mt-5">
                                 <Image src={logo} alt="DeAcademyIcon" className=""/>
@@ -52,9 +58,15 @@ const SideBar = () => {
                      redirectionLink="/student/overview"/>
                 </ul>
                 {/*Student/teacher bottom button*/}
-                <button className="mt-80 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
+                <div className="flex ">
+                <button className="mt-80 rounded-l-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
                     <p className="font-bold text-white">Student</p>
                 </button>
+                <button className="mt-80 rounded-r-full bg-gradient-to-r from-cyan-600  to-violet-700 px-10 py-2">
+                    <p className="font-bold text-white">Teacher</p>
+                </button>
+                </div>  
+
             </div>
 
         </aside>
