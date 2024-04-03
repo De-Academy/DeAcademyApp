@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const SideBar = () => {
     return (
+        <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
             <div className="bg-white border-r-2 border-gray-300 h-full flex flex-col items-center">
 
@@ -70,6 +71,7 @@ const SideBar = () => {
             </div>
 
         </aside>
+        </main>
     );
   }
 
