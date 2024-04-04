@@ -20,7 +20,8 @@ export default function Page() {
     return (
         <div className="flex flex-col h-screen">
             <SideBar/>
-            <div className="flex gap-24 justify-start ml-80 p-4">
+            <div className=" ml-72">
+            <div className="flex gap-24 justify-start p-4">
             <Button color={active === 'informations' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('informations')} className="hover:bg-blue-500">Informations</Button>
             <Button color={active === 'upload' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('upload')} className="hover:bg-blue-500"> Upload</Button>
             </div>
@@ -45,27 +46,28 @@ export default function Page() {
                 </div>
             )}
             {active === 'upload' && (
-                <main >
-                    <div className="flex justify-center items-center h-full ml-36">
-                            <div className="">
+                <main className="w-full flex justify-center">
+                    <div className="flex w-full max-w-2xl flex-col justify-center items-center h-full ml-36">
+                            <div className="w-full">
                                 {[...Array(SectionCount)].map((_, index) => (
                                     <Section key={index} number={index + 1} />
                                 ))}
                             </div>
+                            <button
+                                className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4  mb-3 h-6"
+                                onClick={handleAddSection}>
+                                + Section
+                            </button>
                     </div >
-                    <div className="">
-                        <button
-                            className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4  mb-3 h-6"
-                            onClick={handleAddSection}>
-                            + Section
-                        </button>
-                    </div>
+                    
                 </main>
              
             )}
 
 
             </main>
+            </div>
+           
         </div>
     );
 }

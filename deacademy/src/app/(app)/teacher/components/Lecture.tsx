@@ -16,14 +16,14 @@ const Lecture = ({number}: LectureProps) => {
 
     return (
         <main className="border-black border-2 rounded-lg m-2 p-4">
-            <div className="flex">
+            <div className="lg:flex justify-center">
                     <div className="flex justify-center items-center">
                         <p>Lecture {number}</p>
-                        <TextInput label="" placeholder=""></TextInput>
-                    </div>
-                    <div className="flex gap-10 ml-20">
-                        <Button color={active === 'content' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('content')} className="hover:bg-blue-500">Content</Button>
-                        <Button color={active === 'description' ? 'bg-blue-500' : 'bg-white'}  onClick={() => setActive('description')} className="hover:bg-blue-500">Description</Button>
+                        <TextInput label="" placeholder="Title"></TextInput>
+                    </div>  
+                    <div className="flex gap-10">
+                        <Button color={active === 'content' ? 'bg-blue-500' : 'bg-white'} onClick={() => setActive('content')} className="hover:bg-blue-500 h-full w-full">Content</Button>
+                        <Button color={active === 'description' ? 'bg-blue-500' : 'bg-white'}  onClick={() => setActive('description')} className="hover:bg-blue-500 h-full w-full">Description</Button>
                     </div>
             </div>
             {active === 'content' &&(
