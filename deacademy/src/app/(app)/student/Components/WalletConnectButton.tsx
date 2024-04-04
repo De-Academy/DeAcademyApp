@@ -7,7 +7,7 @@ import * as walletAdapterWallets from '@solana/wallet-adapter-wallets'
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 require('@solana/wallet-adapter-react-ui/styles.css')
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import WalletContext from '../../contexts/WalletContext';
+import WalletContext from '../../context/WalletContext';
 
 const WalletConnectButton = () => {
     const endpoint = web3.clusterApiUrl('devnet')
