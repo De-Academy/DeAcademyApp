@@ -62,6 +62,7 @@ const SideBar = () => {
                      elementTitle="Overview" 
                      redirectionLink="/student/overview"/>
                 </ul>
+                )}
                 {/*Student/teacher bottom button*/}
                 <button className="mt-80 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
                     <p className="font-bold text-white">Student</p>
