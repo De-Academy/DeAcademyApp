@@ -1,6 +1,5 @@
 "use client";
 
-import WalletConnectButton from "./student/Components/WalletConnectButton"
 import SideBar from "./components/sideBar"
 import { SolanaProvider } from "./context/SolanaContext";
 import ConnectWallet from "@/app/(app)/components/ConnectWallet";
@@ -17,11 +16,7 @@ const Layout = ({children} : { children: React.ReactNode}) => {
         <SideBar />
         {children}
 
-       
         </SolanaProvider>
-
-
-
         </>
     )
 }
