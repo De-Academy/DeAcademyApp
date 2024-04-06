@@ -10,8 +10,11 @@ const Layout = ({children} : { children: React.ReactNode}) => {
     return (
         <>
         <SolanaProvider>
+        
+        <div className="flex justify-end m-5">
         <ConnectWallet />
         <ModalConnect />
+        </div>
 
         <SideBar />
         {children}
