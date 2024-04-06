@@ -10,16 +10,14 @@ const SideBar = () => {
     return (
         <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
-            <div className="bg-white border-r-2 border-gray-300 h-full flex flex-col items-center">
+            <div className="bg-white h-full flex flex-col items-center">
 
                 {/*logo e nome*/}
                 <div className="flex flex-row justify-center items-center m-4 mb-14">
                     <a href="/"  className="mt-5">
                                 <Image src={logo} alt="DeAcademyIcon" className=""/>
                     </a>
-                </div>
-                
-
+                </div>  
                 {/*icones*/}
                 <ul>
                     <li>
