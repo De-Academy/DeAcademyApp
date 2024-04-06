@@ -8,22 +8,21 @@ import { useSolana } from "../context/SolanaContext";
 import Modal from "./Modal";
 
 const ModalConnect: React.FC = () => {
-  const { setOpenConnect } = useSolana();
+  const { openConnect, setOpenConnect } = useSolana();
   const { wallets, select } = useWallet();
-  const [open, setOpen] = React.useState(true);
 
   const handleConnectPhantom = useCallback(
     (walletName: string) => {
       select(walletName as any);
       setOpenConnect(false);
-      setOpen(false);
     },
     [setOpenConnect, select]
   );
 
+
   return (
-    <Modal open={open} isBlur>
-      <div className="relative w-[380px] max-w-[380px] bg-[#12151A] rounded-xl px-5 pt-5">
+    <Modal open={openConnect===true} >
+      <div className="relative w-[380px] max-w-[380px] bg-gradient-to-b from-purple-800 to-sky-600 rounded-xl px-5 pt-5">
         <div className="w-full overflow-y-auto min-h-[300px] max-h-[700px] relative pb-6 pt-1">
           <span className="text-white font-medium text-xl text-center font-dm mb-6 flex justify-center items-center">
             Select your wallet
@@ -34,7 +33,7 @@ const ModalConnect: React.FC = () => {
               <div
                 onClick={() => handleConnectPhantom(wallet.adapter.name)}
                 key={wallet.adapter.name}
-                className="flex items-center h-[40px] cursor-pointer px-4 text-white justify-between hover:bg-[#1C1F24] hover:text-fire-orange-400 rounded-md"
+                className="flex items-center h-[40px] cursor-pointer px-4 text-white justify-between hover:bg-sky-600 hover:text-fire-orange-400 rounded-md"
               >
                 <span className="text-base font-medium">
                   {wallet.adapter.name}
