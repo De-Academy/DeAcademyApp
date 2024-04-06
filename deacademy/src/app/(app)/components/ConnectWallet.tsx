@@ -81,19 +81,19 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
   }, [filterRef]);
 
   return (
-    <div ref={filterRef} className={cn(className, "relative w-[180px]")}>
+    <div ref={filterRef} className={cn(className, "")}>
       <div
         onClick={handleClickConnect}
         className={cn(
-          "relative overflow-hidden lg:flex items-center w-full h-[44px] cursor-pointer p-[1px] rounded-xl"
+          "relative lg:flex items-center w-full  cursor-pointer p-[1px] rounded-xl"
         )}
       >
-        <div className="bg-purple-200 rounded-xl relative w-[180px] flex items-center justify-center z-[1]">
-          <div className="relative z-10 flex items-center justify-center">
-            <div className="bg-red-500 text-white text-sm font-bold uppercase flex items-center">
+        
+          <div className="relative z-10 flex items-center justify-center uppercase font-bold text-white">
+            <Button className="rounded-full m-4 p-4 w-40">
               {wallet.connected ? (
                 <>
-                  <Button>
+                 
                     <Image
                       className="mr-2"
                       width={21}
@@ -101,21 +101,18 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
                       src={wallet.wallet?.adapter.icon || ""}
                       alt="wallet_icon"
                     />
-                    {truncateWallet(wallet.publicKey?.toBase58(), 10)}
-                  </Button>
+                    {truncateWallet(wallet.publicKey?.toBase58(), 10)}  
                 </>
               ) : (
                 <>
-                  <Button>Connect wallet</Button>
+                  <p>Connect wallet</p>
                 </>
               )}
-            </div>
+              </Button>
           </div>
         </div>
-      </div>
-      
       {openDropdown &&
-      <div className={cn("bg-cyan-400", openDropdown && "wallet-adapter-dropdown-list-active")}>
+      <div className={cn("rounded-xl p-2 m-1 bg-gradient-to-r from-purple-800 to-sky-600", openDropdown && "wallet-adapter-dropdown-list-active")}>
         <div className="flex items-center mb-2 px-2.5 pointer-events-none">
           <Image
             className="mr-2"
@@ -132,7 +129,7 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
           <div
             key={index}
             onClick={item.action}
-            className="wallet-adapter-dropdown-list-item text-white hover:bg-[#49afe926] hover:text-kamino-blue-light"
+            className="wallet-adapter-dropdown-list-item cursor-pointer	font-bold text-white hover:bg-sky-600 hover:rounded-lg hover:p-1"
           >
             {item.title}
           </div>
