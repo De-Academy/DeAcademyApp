@@ -17,6 +17,10 @@ export default function Page() {
         setSectionCount(prevCount => prevCount + 1);
     };
 
+    const handleRemoveSection = (indexToRemove: number) => {
+        setSectionCount(prevCount => prevCount - 1);
+    };
+
     return (
         <div className="flex flex-col h-screen">
             <SideBar/>
@@ -48,11 +52,15 @@ export default function Page() {
             {active === 'upload' && (
                 <main className="w-full flex justify-center">
                     <div className="flex w-full max-w-2xl flex-col justify-center items-center h-full ml-36">
-                            <div className="w-full">
-                                {[...Array(SectionCount)].map((_, index) => (
-                                    <Section key={index} number={index + 1} />
-                                ))}
-                            </div>
+                    <div className="w-full">
+                                    {[...Array(SectionCount)].map((_, index) => (
+                                        <Section
+                                            key={index}
+                                            number={index + 1}
+                                            onRemove={() => handleRemoveSection(index)}
+                                        />
+                                    ))}
+                                </div>
                             <button
                                 className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4  mb-3 h-6"
                                 onClick={handleAddSection}>

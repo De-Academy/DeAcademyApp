@@ -4,10 +4,11 @@ import { TextInput } from "./textInput";
 
 interface SectionProps {
     number: number
+    onRemove: () => void;
 }
 
 
-const Section = ({number} : SectionProps) => {
+const Section = ({number, onRemove} : SectionProps) => {
     const [lectureCount, setLectureCount] = useState(1);
 
     const handleAddLecture = () => {
@@ -17,9 +18,14 @@ const Section = ({number} : SectionProps) => {
 
     return (
         <section className="border-black border-2 mb-4 rounded-lg pr-10 pl-10">
-            <div className="flex justify-start items-center mb-4 mt-4">
-                        <p>Section {number}</p>
-                        <TextInput label="" placeholder=""></TextInput>
+            <div className="flex justify-between mb-4 mt-4">
+                <div className="flex justify-start items-center">
+                    <p>Section {number}</p>
+                    <TextInput label="" placeholder=""></TextInput>
+                </div>
+                <div>
+                    <button onClick={onRemove} className="hover:bg-blue-400 rounded-full p-3 mt-2 mb-2"> X </button>
+                </div>
             </div>
             <div>
                 {[...Array(lectureCount)].map((_, index) => (
