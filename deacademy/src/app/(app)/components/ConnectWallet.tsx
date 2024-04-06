@@ -1,5 +1,3 @@
-"use client";
-
 import React, {
   useCallback,
   useEffect,
@@ -13,6 +11,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useSolana } from "@/app/(app)/context/SolanaContext";
 import { cn } from "@/utils/cn";
 import Button from "./Button";
+import ModalConnect from "./ModalConnect";
 
 interface Props {
   className?: string;
@@ -27,22 +26,10 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
   const handleClickConnect = useCallback(() => {
     if (wallet.connected) {
       setOpenDropdown(!openDropdown);
-      return;
+    } else {
+      setOpenConnect(true);
     }
-
-    setOpenConnect(true);
   }, [openDropdown, setOpenConnect, wallet.connected]);
-
-  const blockStyles = useMemo(
-    () => (
-      <>
-        <div className="button-block-top-left -top-[1px] -left-[1px] rotate-90" />
-
-        <div className="button-block-bottom-right -bottom-[1px] -right-[1px] -rotate-90" />
-      </>
-    ),
-    []
-  );
 
   const changeWallet = useCallback(() => {
     wallet.disconnect();
@@ -58,7 +45,6 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
   const copyAddress = useCallback(() => {
     const formatWallet =
       truncateWallet(wallet?.publicKey?.toBase58(), 10) || "";
-
     setOpenDropdown(false);
   }, [wallet]);
 
@@ -96,43 +82,40 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
 
   return (
     <div ref={filterRef} className={cn(className, "relative w-[180px]")}>
-      {blockStyles}
-
       <div
-        onBlur={() => setOpenDropdown(false)}
         onClick={handleClickConnect}
         className={cn(
           "relative overflow-hidden lg:flex items-center w-full h-[44px] cursor-pointer p-[1px] rounded-xl"
         )}
       >
-        <div className="h-[43px] connect-wallet rounded-xl relative w-[180px] flex items-center justify-center z-[1]">
-          <div className="flex justify-end items-center">
-            <span className=" text-white text-sm font-bold uppercase flex items-center">
+        <div className="bg-purple-200 rounded-xl relative w-[180px] flex items-center justify-center z-[1]">
+          <div className="relative z-10 flex items-center justify-center">
+            <div className="bg-red-500 text-white text-sm font-bold uppercase flex items-center">
               {wallet.connected ? (
-                <Button>
-                  <Image
-                    className="mr-2"
-                    width={21}
-                    height={21}
-                    src={wallet.wallet?.adapter.icon || ""}
-                    alt="wallet_icon"
-                  />
-                  {truncateWallet(wallet.publicKey?.toBase58(), 10)}
-                </Button>
+                <>
+                  <Button>
+                    <Image
+                      className="mr-2"
+                      width={21}
+                      height={21}
+                      src={wallet.wallet?.adapter.icon || ""}
+                      alt="wallet_icon"
+                    />
+                    {truncateWallet(wallet.publicKey?.toBase58(), 10)}
+                  </Button>
+                </>
               ) : (
-                <Button>Connect wallet</Button>
+                <>
+                  <Button>Connect wallet</Button>
+                </>
               )}
-            </span>
+            </div>
           </div>
         </div>
       </div>
-
-      <div
-        className={cn(
-          "wallet-adapter-dropdown-list",
-          openDropdown && "wallet-adapter-dropdown-list-active"
-        )}
-      >
+      
+      {openDropdown &&
+      <div className={cn("bg-cyan-400", openDropdown && "wallet-adapter-dropdown-list-active")}>
         <div className="flex items-center mb-2 px-2.5 pointer-events-none">
           <Image
             className="mr-2"
@@ -141,7 +124,6 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
             src={wallet.wallet?.adapter.icon || ""}
             alt="wallet_icon"
           />
-
           <span className="text-white text-sm font-medium flex pt-0.5">
             {wallet.wallet?.adapter.name}
           </span>
@@ -156,6 +138,7 @@ const ConnectWallet: React.FC<Props> = ({ className }) => {
           </div>
         ))}
       </div>
+      }
     </div>
   );
 };
