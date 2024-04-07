@@ -17,14 +17,14 @@ const Section = ({number, onRemove} : SectionProps) => {
 
 
     return (
-        <section className="border-black border-2 mb-4 rounded-lg pr-10 pl-10">
-            <div className="flex justify-between mb-4 mt-4">
+        <section className="border-gray-300  border-2 mb-4 rounded-lg pr-10 pl-10">
+            <div className="flex justify-between mb-4 mt-4 text-purple-800 font-bold">
                 <div className="flex justify-start items-center">
                     <p>Section {number}</p>
                     <TextInput label="" placeholder=""></TextInput>
                 </div>
                 <div>
-                    <button onClick={onRemove} className="hover:bg-blue-400 rounded-full p-3 mt-2 mb-2"> X </button>
+                    <button onClick={onRemove} className="hover:bg-[#1B1B1B] rounded-full p-3 mt-2 mb-2"> X </button>
                 </div>
             </div>
             <div>
@@ -33,7 +33,7 @@ const Section = ({number, onRemove} : SectionProps) => {
                 ))}
             </div>
             <button 
-                className="w-full flex justify-center items-center border-black border-2 rounded-lg p-4 mt-5 mb-3 h-6"
+                className="w-full flex justify-center items-center border-gray-300  border-2 rounded-lg p-4 mt-5 mb-3 h-6"
                 onClick={handleAddLecture}
             >
                 + Lecture
