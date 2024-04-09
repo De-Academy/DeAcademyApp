@@ -8,22 +8,21 @@ import Image from "next/image";
 
 const SideBar = () => {
     return (
+        <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
-            <div className="bg-white border-r-2 border-gray-300 h-full flex flex-col items-center">
+            <div className="bg-white h-full flex flex-col items-center">
 
                 {/*logo e nome*/}
                 <div className="flex flex-row justify-center items-center m-4 mb-14">
                     <a href="/"  className="mt-5">
                                 <Image src={logo} alt="DeAcademyIcon" className=""/>
                     </a>
-                </div>
-                
-
+                </div>  
                 {/*icones*/}
                 <ul>
                     <li>
                         <div className="flex flex-row items-center my-8">
-                           <a href="/StudentPages/Courses">
+                           <a href="/student/courses">
                                 <Image src={courses} alt="Courses Icon" className=" h-14 w-14"/>
                             </a>
                             <a href="/student/courses">
@@ -33,7 +32,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <div className="flex flex-row items-center my-8">
-                           <a href="/StudentPages/MyCourses">
+                           <a href="/student/mycourses">
                                 <Image src={myCourses} alt="myCourses Icon" className=" h-14 w-14"/>
                             </a>
                             <a href="/student/mycourses">
@@ -70,6 +69,7 @@ const SideBar = () => {
             </div>
 
         </aside>
+        </main>
     );
   }
 
