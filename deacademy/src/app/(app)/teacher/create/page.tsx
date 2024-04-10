@@ -32,7 +32,7 @@ export default function Page() {
             <main className="flex-1">
             {active === 'informations' && (
                 <div className="flex justify-center items-center h-full">
-                    <div className="ml-10 w-1/2">
+                    <div className="ml-10 w-3/4">
                         <div className="grid grid-cols-2 gap-4 m-2">
                             <div className="border-gray-300  text-purple-600 border-2 rounded-lg">
                             <TextInput placeholder={"Title"} label={"label"} />
@@ -50,7 +50,7 @@ export default function Page() {
             )}
             {active === 'upload' && (
                 <section className="w-full flex justify-center">
-                    <div className="flex w-full max-w-2xl flex-col justify-center items-center h-full ml-36">
+                    <div className="flex w-3/4 flex-col justify-center items-center h-full ml-36">
                     <div className="w-full">
                                     {[...Array(SectionCount)].map((_, index) => (
                                         <Section
