@@ -2,9 +2,9 @@
 
 import logo from "../../../assets/logo e nome 3.png"
 import courses from "../../../assets/courses-black.png"
-import myCourses from "../../../assets/my courses-black.png"
+import myCourses from "../../../assets/mycourses-black.png"
 import marketplace from "../../../assets/marketplace-black.png"
-import overview from "../../../assets/painel-black.png"
+import overview from "../../../assets/overview-black.png"
 import Image from "next/image";
 import SideBarElement from "./SideBarElement"
 import { useState } from "react"
@@ -33,31 +33,31 @@ const SideBar = () => {
                 {/*Elementos*/}
 
                 {active === 'student' && (
-                <ul>
+                <ul className="w-3/4">
                     <SideBarElement 
                      elementIcon={
-                        <Image src={courses} alt="CoursesIcon" className="h-14 w-14"/>
+                        <Image src={courses} alt="CoursesIcon" className="h-10 w-10 ml-2"/>
                      }
                      elementTitle="Courses" 
                      redirectionLink="/student/courses" />
 
                     <SideBarElement 
                      elementIcon={
-                        <Image src={myCourses} alt="MyCoursesIcon" className="h-14 w-14"/>
+                        <Image src={myCourses} alt="MyCoursesIcon" className="h-10 w-12"/>
                      }
                      elementTitle="My Courses" 
                      redirectionLink="/student/mycourses" />
 
                     <SideBarElement 
                      elementIcon={
-                        <Image src={marketplace} alt="MarketplaceIcon" className="h-14 w-14"/>
+                        <Image src={marketplace} alt="MarketplaceIcon" className="h-10 w-10 ml-2"/>
                      }
                      elementTitle="Marketplace" 
                      redirectionLink="/student/marketplace" />
                     
                     <SideBarElement 
                      elementIcon={
-                        <Image src={overview} alt="OverviewIcon" className="h-14 w-14"/>
+                        <Image src={overview} alt="OverviewIcon" className="h-10 w-10 ml-2"/>
                      }
                      elementTitle="Overview" 
                      redirectionLink="/student/overview"/>
