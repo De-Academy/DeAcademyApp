@@ -50,7 +50,7 @@ const page = () => {
                   height={25}
                 />
               </a>
-              <a href="https://twitter.com/de_academy_" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
+              <a href="https://github.com/De-Academy/DeAcademyApp" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
                 <Image
                   src={github_logo}
                   alt="Logo"

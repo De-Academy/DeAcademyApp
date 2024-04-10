@@ -1,7 +1,10 @@
-import sideBar from "../../components/sideBar";
+import SideBar from "../../components/sideBar";
+
 
 export default function Page() {
     return (
-        sideBar()
+        <section>
+            
+        </section>
     );
 }
