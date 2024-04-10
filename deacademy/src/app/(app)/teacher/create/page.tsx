@@ -17,7 +17,7 @@ export default function Page() {
         setSectionCount(prevCount => prevCount + 1);
     };
 
-    const handleRemoveSection = (indexToRemove: number) => {
+    const handleRemoveSection = () => {
         setSectionCount(prevCount => prevCount - 1);
     };
 
@@ -56,7 +56,7 @@ export default function Page() {
                                         <Section
                                             key={index}
                                             number={index + 1}
-                                            onRemove={() => handleRemoveSection(index)}
+                                            onRemove={() => handleRemoveSection()}
                                         />
                                     ))}
                                 </div>
