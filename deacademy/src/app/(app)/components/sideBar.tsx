@@ -1,67 +1,68 @@
+"use client";
 
 import logo from "../../../assets/logo e nome 3.png"
 import courses from "../../../assets/courses-black.png"
-import myCourses from "../../../assets/my courses-black.png"
+import myCourses from "../../../assets/mycourses-black.png"
 import marketplace from "../../../assets/marketplace-black.png"
-import overview from "../../../assets/painel-black.png"
+import overview from "../../../assets/overview-black.png"
 import Image from "next/image";
+import SideBarElement from "./SideBarElement"
+import { useState } from "react"
 
 const SideBar = () => {
+
+    const [active, setActive] = useState<'teacher' | 'student'>('student');
+
+
+
+
     return (
         <main>
         <aside className="h-screen w-72 fixed top-0 left-0 justify-center">
             <div className="bg-white h-full flex flex-col items-center">
 
                 {/*logo e nome*/}
+                
                 <div className="flex flex-row justify-center items-center m-4 mb-14">
                     <a href="/"  className="mt-5">
                                 <Image src={logo} alt="DeAcademyIcon" className=""/>
                     </a>
-                </div>  
-                {/*icones*/}
-                <ul>
-                    <li>
-                        <div className="flex flex-row items-center my-8">
-                           <a href="/student/courses">
-                                <Image src={courses} alt="Courses Icon" className=" h-14 w-14"/>
-                            </a>
-                            <a href="/student/courses">
-                                <h2 className="font-semibold text-2xl text-black mx-2">Courses</h2>
-                                </a> 
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-row items-center my-8">
-                           <a href="/student/mycourses">
-                                <Image src={myCourses} alt="myCourses Icon" className=" h-14 w-14"/>
-                            </a>
-                            <a href="/student/mycourses">
-                                <h2 className="font-semibold text-2xl text-black mx-2">My courses</h2>
-                            </a> 
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-row items-center my-8">
-                           <a href="/student/marketplace">
-                                <Image src={marketplace} alt="myCourses Icon" className=" h-14 w-14"/>
-                            </a>
-                            <a href="/student/marketplace">
-                                <h2 className="font-semibold text-2xl text-black mx-2">Marketplace</h2>
-                            </a> 
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-row items-center my-8">
-                           <a href="/student/overview">
-                                <Image src={overview} alt="myCourses Icon" className=" h-14 w-14"/>
-                            </a>
-                            <a href="/student/overview">
-                                <h2 className="font-semibold text-2xl text-black px-2">Overview</h2>
-                            </a> 
-                        </div>
-                    </li>
-                </ul>
+                </div>
+                
 
+                {/*Elementos*/}
+
+                {active === 'student' && (
+                <ul className="w-3/4">
+                    <SideBarElement 
+                     elementIcon={
+                        <Image src={courses} alt="CoursesIcon" className="h-10 w-10 ml-2"/>
+                     }
+                     elementTitle="Courses" 
+                     redirectionLink="/student/courses" />
+
+                    <SideBarElement 
+                     elementIcon={
+                        <Image src={myCourses} alt="MyCoursesIcon" className="h-10 w-12"/>
+                     }
+                     elementTitle="My Courses" 
+                     redirectionLink="/student/mycourses" />
+
+                    <SideBarElement 
+                     elementIcon={
+                        <Image src={marketplace} alt="MarketplaceIcon" className="h-10 w-10 ml-2"/>
+                     }
+                     elementTitle="Marketplace" 
+                     redirectionLink="/student/marketplace" />
+                    
+                    <SideBarElement 
+                     elementIcon={
+                        <Image src={overview} alt="OverviewIcon" className="h-10 w-10 ml-2"/>
+                     }
+                     elementTitle="Overview" 
+                     redirectionLink="/student/overview"/>
+                </ul>
+                )}
                 {/*Student/teacher bottom button*/}
                 <button className="mt-80 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
                     <p className="font-bold text-white">Student</p>
