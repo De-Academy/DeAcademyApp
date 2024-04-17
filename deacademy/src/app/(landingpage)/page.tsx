@@ -29,7 +29,7 @@ const page = () => {
             </div>
             <div className="hidden md:flex items-center mt-6">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className="text-gray-100 hover:bg-purple-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">What We Are</a>
+                <a href="/about" className="text-gray-100 hover:bg-purple-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
                 <a href="#" className="text-gray-100 hover:bg-purple-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">RoadMap</a>
               </div>
               <a href="https://discord.gg/EFJB3s3U" target="_blank" className="text-white font-bold text-xl flex items-center ml-4  hover:bg-purple-900 rounded-md px-1 py-1">
