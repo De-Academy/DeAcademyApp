@@ -1,10 +1,14 @@
 "use client";
 
 import logo from "../../../assets/logo e nome 3.png"
-import courses from "../../../assets/courses-black.png"
-import myCourses from "../../../assets/mycourses-black.png"
-import marketplace from "../../../assets/marketplace-black.png"
-import overview from "../../../assets/overview-black.png"
+import coursesBlack from "../../../assets/icon-90x90-black-courses.png"
+import myCoursesBlack from "../../../assets/icon-90x90-black-mycourses.png"
+import marketplaceBlack from "../../../assets/icon-90x90-black-marketplace.png"
+import overviewBlack from "../../../assets/icon-90x90-black-overview.png"
+import coursesWhite from "../../../assets/icon-90x90-white-courses.png"
+import myCoursesWhite from "../../../assets/icon-90x90-white-mycourses.png"
+import marketplaceWhite from "../../../assets/icon-90x90-white-marketplace.png"
+import overviewWhite from "../../../assets/icon-90x90-white-overview.png"
 import Image from "next/image";
 import SideBarElement from "./SideBarElement"
 import { useState } from "react"
@@ -35,29 +39,37 @@ const SideBar = () => {
                 {active === 'student' && (
                 <ul className="w-3/4">
                     <SideBarElement 
-                     elementIcon={
-                        <Image src={courses} alt="CoursesIcon" className="h-10 w-10 ml-2"/>
+                     elementIcon={[
+                        <Image src={coursesBlack} alt="CoursesIcon"/>,
+                        <Image src={coursesWhite} alt="CoursesIcon"/>
+                    ]
                      }
                      elementTitle="Courses" 
                      redirectionLink="/student/courses" />
 
                     <SideBarElement 
-                     elementIcon={
-                        <Image src={myCourses} alt="MyCoursesIcon" className="h-10 w-12"/>
-                     }
+                     elementIcon={[
+                        <Image src={myCoursesBlack} alt="MyCoursesIcon"/>,
+                        <Image src={myCoursesBlack} alt="MyCoursesIcon"/>
+                    ] 
+                    }
                      elementTitle="My Courses" 
                      redirectionLink="/student/mycourses" />
 
                     <SideBarElement 
-                     elementIcon={
-                        <Image src={marketplace} alt="MarketplaceIcon" className="h-10 w-10 ml-2"/>
+                     elementIcon={[
+                        <Image src={marketplaceBlack} alt="MarketplaceIcon"/>,
+                        <Image src={marketplaceWhite} alt="MarketplaceIcon"/>
+                    ]    
                      }
                      elementTitle="Marketplace" 
                      redirectionLink="/student/marketplace" />
                     
                     <SideBarElement 
-                     elementIcon={
-                        <Image src={overview} alt="OverviewIcon" className="h-10 w-10 ml-2"/>
+                     elementIcon={[
+                        <Image src={overviewBlack} alt="OverviewIcon" />,
+                        <Image src={overviewWhite} alt="OverviewIcon" />
+                    ]
                      }
                      elementTitle="Overview" 
                      redirectionLink="/student/overview"/>
