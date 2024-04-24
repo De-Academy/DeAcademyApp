@@ -11,7 +11,7 @@ const Layout = ({children} : { children: React.ReactNode}) => {
         <>
         <SolanaProvider>
         <SideBar />
-        <div className="bg-[#EFEDED]">
+        <div className="bg-[#F6F6F6]">
             <div className="fixed top-0 right-0 flex justify-end">
                 <ConnectWallet />
                 <ModalConnect />
