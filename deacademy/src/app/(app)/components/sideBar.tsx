@@ -43,7 +43,7 @@ const SideBar = () => {
 
                     <SideBarElement 
                      elementIcon={
-                        <Image src={myCourses} alt="MyCoursesIcon" className="h-10 w-12"/>
+                        <Image src={myCourses} alt="MyCoursesIcon" className="h-9 w-11 ml-1"/>
                      }
                      elementTitle="My Courses" 
                      redirectionLink="/student/mycourses" />
@@ -55,16 +55,16 @@ const SideBar = () => {
                      elementTitle="Marketplace" 
                      redirectionLink="/student/marketplace" />
                     
-                    <SideBarElement 
+                    <SideBarElement
                      elementIcon={
-                        <Image src={overview} alt="OverviewIcon" className="h-10 w-10 ml-2"/>
+                        <Image src={overview} alt="OverviewIcon" className="h-8 w-10 ml-2"/>
                      }
                      elementTitle="Overview" 
                      redirectionLink="/student/overview"/>
                 </ul>
                 )}
                 {/*Student/teacher bottom button*/}
-                <button className="mt-80 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
+                <button className="fixed bottom-5 rounded-full bg-gradient-to-r from-violet-700 to-cyan-600 px-10 py-2">
                     <p className="font-bold text-white">Student</p>
                 </button>
             </div>
