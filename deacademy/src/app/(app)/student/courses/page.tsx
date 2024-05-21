@@ -50,7 +50,7 @@ export default function Page() {
                 </div>
             </div>
 
-            /* videos */
+            /* courses */
             <div className=" mt-28 h-full w-98 fixed top-4 left-80 flex justify-start bg-[#F4F6F9]">
                 <div className="container mx-auto p-4">
                     <div className="flex flex-wrap -mx-2">
