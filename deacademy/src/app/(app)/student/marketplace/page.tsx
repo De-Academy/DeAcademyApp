@@ -50,10 +50,8 @@ export default function Page() {
                 </div>
             </div>
 
-            /* courses */
-            <div className=" mt-28 h-full w-98 fixed top-4 left-80 flex justify-start bg-[#F4F6F9]">
-                <div className="container mx-auto p-4">
-                    <div className="flex flex-wrap -mx-2">
+            {/* courses */}
+            <div className="m-flex flex-wrap">
                         {images.map((src, index) => (
                             <div key={index} className="w-10/12 p-2 mx-2 flex flex-row">
                                 <div className="bg-white p-4 w-10/12 rounded shadow-md h-60 cursor-pointer hover:-translate-y-1 drop-shadow-xl hover:drop-shadow-2xl flex justify-start place-items-start flex-row">
