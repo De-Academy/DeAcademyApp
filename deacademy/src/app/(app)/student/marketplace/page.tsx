@@ -21,18 +21,18 @@ export default function Page() {
     return (
         <main className="bg-[#F4F6F9] h-lvh">
             
-            /* Texto de cima */
-            <div className="fixed top-4 left-80 flex justify-start z-50">
+            {/* Texto de cima */}
+            <div className="flex justify-start">
                 <div className="flex flex-col">
-                    <button id="toggleCategories"  onClick={toggleMenu} className="z-50 bg-purple-600 rounded-full h-10 mx-10 mt-10 mb-2 text-gray-50 px-5 hover:bg-purple-700 font-bold hover:-translate-y-1">Categories</button>
+                    <button id="toggleCategories"  onClick={toggleMenu} className="bg-purple-600 rounded-full h-10 mx-10 mt-10 mb-2 text-gray-50 px-5 hover:bg-purple-700 font-bold hover:-translate-y-1">Categories</button>
                 
                     {isMenuOpen && (
-                        <div id="categoriesMenu" className="absolute mx-auto top-[90px] left-10 mt-0 bg-white shadow-md rounded-2xl p-3 w-30 z-50">
+                        <div id="categoriesMenu" className=" mx-auto top-[90px] left-10 mt-0 bg-white shadow-md rounded-2xl p-3 w-30">
                             <ul>
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Solidity</a></li>
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Blockchain</a></li>
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Bitcoin</a></li>
-                                <li className="z-50 py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Ethereum</a></li>
+                                <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Ethereum</a></li>
                             </ul>
                         </div>
                     )}
