@@ -11,11 +11,11 @@ export default function Page() {
       setIsMenuOpen(!isMenuOpen)
     }
 
-    const images = [
-        {image:"/images/python_image.png", price: "0.10", title:"Python Course", desc: "You will learn all you need to become a python dev!"},
-        {image:"/images/solidity.png", price: "0.12", title:"Solidity Course", desc: "Solidity is the most used language for creating smart contracts, lets learn!"},
-        {image:"/images/bitcoin.png", price: "0.05", title:"Bitcoin Course", desc: "Bitcoin is the digital gold, learn more about it."},
-        {image:"/images/ethereum.jpg", price: "0.08", title:"Ethereum Course", desc: "Ethereum is a well known blockchain, i will explain everything about it."},
+    const courses = [
+        {id: 1, image: "/images/python_image.png", price: "0.10", title:"Python Course", desc: "You will learn all you need to become a python dev!"},
+        {id: 2, image: "/images/solidity.png", price: "0.12", title:"Solidity Course", desc: "Solidity is the most used language for creating smart contracts, lets learn!"},
+        {id: 3, image: "/images/bitcoin.png", price: "0.05", title:"Bitcoin Course", desc: "Bitcoin is the digital gold, learn more about it."},
+        {id: 4, image: "/images/ethereum.jpg", price: "0.08", title:"Ethereum Course", desc: "Ethereum is a well known blockchain, i will explain everything about it."},
     ]
 
     return (
