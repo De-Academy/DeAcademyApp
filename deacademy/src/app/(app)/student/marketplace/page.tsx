@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { LineGraph } from "../../components/LineGraph";
+import { SearchBar } from "../../components/Searchbar";
 
 
 export default function Page() {
@@ -20,7 +22,7 @@ export default function Page() {
 
     return (
         <main className="bg-[#F4F6F9] h-lvh">
-            
+
             {/* Texto de cima */}
             <div className="flex justify-start">
                 <div className="flex flex-col">
@@ -32,50 +34,39 @@ export default function Page() {
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Solidity</a></li>
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Blockchain</a></li>
                                 <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Bitcoin</a></li>
-                                <li className="py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Ethereum</a></li>
+                                <li className=" py-1 hover:bg-slate-300 rounded-xl p-2"><a href="#" className="text-black">Ethereum</a></li>
                             </ul>
                         </div>
                     )}
                 </div>
-                
-                
-                <div className="m-10 h-10 z-0">
-                    <div className="absolute inset-y-12 start-60 ps-3 pointer-events-none mt-0.5">
-                        <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>
-                    </div>
-                    
-                    <input type="search" className="text-xl ps-10 h-10 rounded-xl" placeholder="Search here..."/>
+                <div className="m-10">
+                <SearchBar/>
                 </div>
             </div>
 
             {/* courses */}
             <div className="m-flex flex-wrap">
-                        {images.map((src, index) => (
+                {images.map((src, index) => (
                     <div key={index} className="w-10/12 p-2 flex flex-row">
                     <div className="bg-white p-4 w-full rounded shadow-md h-60 cursor-pointer transition duration-300 hover:bg-sky-600 hover:translate-y-2 hover:text-gray-200 drop-shadow-xl hover:drop-shadow-2xl flex">
                         <div className="flex flex-col justify-between w-1/2 pr-2">
                         <div>
-                                        <img src={src.image} alt={`Imagem ${index + 1}`} className="w-72 h-32 rounded"/>
-                                        <p className="mt-2">{src.title}</p>
-                                        <p className="text-[14px]">{src.desc}</p>
+                            <img src={src.image} alt={`Imagem ${index + 1}`} className="w-72 h-32 rounded"/>
+                            <p className="mt-2">{src.title}</p>
+                            <p className="text-[14px]">{src.desc}</p>
                         </div>
                         <div className="flex items-center">
                             <p className="mr-2">{src.price}</p>
                             <img src="/images/solana.png" alt="" className="h-4 w-4"/>
-                                        </div>
-                                    </div>
+                        </div>
+                        </div>
                         <div className="w-1/2 h-full">
                         <LineGraph/>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                        </div>
                     </div>
-                </div>
+                    </div>
+                ))}
             </div>
-            
         </main>
     );
 }
