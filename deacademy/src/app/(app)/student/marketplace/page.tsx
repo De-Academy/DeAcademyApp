@@ -67,8 +67,8 @@ export default function Page() {
                                             <img src="/images/solana.png" alt="" className="h-4 w-4 "/>
                                         </div>
                                     </div>
-                                    <div>
-                                        <img src="/images/grafico1.png" alt="" className="h-32 w-80 ml-10"/>
+                        <div className="w-1/2 h-full">
+                        <LineGraph/>
                                     </div>
                                 </div>
                             </div>
