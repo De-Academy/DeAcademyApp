@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CourseCard from "../../components/CourseCard";
 
 
 export default function Page() {
@@ -57,7 +58,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            
-        </main>
+        </section>
     );
 }
