@@ -53,16 +53,17 @@ export default function Page() {
             {/* courses */}
             <div className="m-flex flex-wrap">
                         {images.map((src, index) => (
-                            <div key={index} className="w-10/12 p-2 mx-2 flex flex-row">
-                                <div className="bg-white p-4 w-10/12 rounded shadow-md h-60 cursor-pointer hover:-translate-y-1 drop-shadow-xl hover:drop-shadow-2xl flex justify-start place-items-start flex-row">
-                                    <div className="w-80">
+                    <div key={index} className="w-10/12 p-2 flex flex-row">
+                    <div className="bg-white p-4 w-full rounded shadow-md h-60 cursor-pointer transition duration-300 hover:bg-sky-600 hover:translate-y-2 hover:text-gray-200 drop-shadow-xl hover:drop-shadow-2xl flex">
+                        <div className="flex flex-col justify-between w-1/2 pr-2">
+                        <div>
                                         <img src={src.image} alt={`Imagem ${index + 1}`} className="w-72 h-32 rounded"/>
                                         <p className="mt-2">{src.title}</p>
                                         <p className="text-[14px]">{src.desc}</p>
-                                    
-                                        <div className="flex flex-row place-self-end justify-self-end h-5 w-10 align-middle items-center mx-4">
-                                            <p className="mx-2">{src.price}</p>
-                                            <img src="/images/solana.png" alt="" className="h-4 w-4 "/>
+                        </div>
+                        <div className="flex items-center">
+                            <p className="mr-2">{src.price}</p>
+                            <img src="/images/solana.png" alt="" className="h-4 w-4"/>
                                         </div>
                                     </div>
                         <div className="w-1/2 h-full">
